@@ -13,5 +13,7 @@ class Solution {
             answer = Integer.valueOf(s2+s1);
         }
         return answer;
+        
+        //return Math.max(Integer.parseInt(a + "" + b), Integer.parseInt(b + "" + a));
     }
 }
