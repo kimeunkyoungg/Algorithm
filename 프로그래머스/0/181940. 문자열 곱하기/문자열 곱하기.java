@@ -1,6 +1,5 @@
 class Solution {
     public String solution(String my_string, int k) {
-        String answer = "";
         StringBuilder sb = new StringBuilder();
         
         
@@ -8,5 +7,7 @@ class Solution {
             sb.append(my_string);
         }
         return sb.toString();
+        
+        //return my_string.repeat(k);
     }
 }
