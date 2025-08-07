@@ -13,15 +13,9 @@ class Solution {
             }
         }
         
-        if(evensum>oddsum){
-            return evensum;
-        }
-        else if(evensum<oddsum){
-            return oddsum;
-        }
-        else{
-            return evensum;
-        }
+        answer = evensum>oddsum ? evensum : oddsum;
+      
+        return answer;
 
     }
 }
