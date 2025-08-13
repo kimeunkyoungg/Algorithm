@@ -9,6 +9,6 @@ class Solution {
             num += price*i;
         }
         
-        return num<=money ? 0 : ((long)(num-money));
+        return num<=money ? 0 : num-money;
     }
 }
