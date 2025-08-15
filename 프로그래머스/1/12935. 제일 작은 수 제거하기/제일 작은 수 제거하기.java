@@ -6,7 +6,6 @@ class Solution {
             return new int[]{-1};
         }
         
-        // 1. 최솟값 찾기
         int minValue = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < minValue) {
@@ -14,7 +13,6 @@ class Solution {
             }
         }
         
-        // 2. 최솟값 제외한 배열 만들기
         int[] result = new int[arr.length - 1];
         int index = 0;
         for (int i = 0; i < arr.length; i++) {
