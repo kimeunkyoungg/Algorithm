@@ -1,22 +1,20 @@
 class Solution {
     public int solution(int n) {
-        int answer = 0;
-        //짝수는 2제외하고 무조건 아님
-        //boolean 쓰는거 익숙해지기
-        if(n>=2) answer ++;
-        
-        for(int i=3; i<=n; i+=2){ //홀수만 검사
-            boolean isPrime = true;
-            for(int j=3; i>=j*j; j+=2){
-                if(i%j == 0) {
-                    isPrime = false;
-                    break;
+        if (n < 2) return 0;
+
+        boolean[] composite = new boolean[n + 1]; // 합성수 표시
+        for (int p = 2; p * p <= n; p++) {
+            if (!composite[p]) {
+                for (long q = (long)p * p; q <= n; q += p) {
+                    composite[(int)q] = true;
                 }
-                
             }
-            if(isPrime) answer ++;
         }
 
-        return answer;
+        int cnt = 0;
+        for (int i = 2; i <= n; i++) {
+            if (!composite[i]) cnt++;
+        }
+        return cnt;
     }
 }
