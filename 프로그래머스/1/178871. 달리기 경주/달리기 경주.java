@@ -8,7 +8,7 @@ class Solution {
         
         String[] answer = Arrays.copyOf(players, players.length);
         
-        //hashmap으로 저장해주기
+        //hashmap으로 저장해주기 -> 시간이 너무 오래 걸려서 hashMap 사용해봄
         Map<String, Integer> map = new HashMap<>(); //현재 등수 map
                 
         for (int i = 0; i < players.length; i++) {
